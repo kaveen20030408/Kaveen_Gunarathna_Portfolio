@@ -5,6 +5,10 @@ export type Project = {
   stack: string[];
   year: string;
   link?: string;
+  github?: string;
+  image?: string;
+  video?: string;// Newly added for Porject demo video links
+  bullets?: string[];
 };
 
 export type SkillGroup = {
