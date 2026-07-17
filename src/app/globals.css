@@ -30,6 +30,59 @@ a {
   text-decoration: none;
 }
 
+/* ─── Card Fan Carousel ─────────────────────────────────────── */
+
+/* Container heights (must be tall enough for the card + y-offset) */
+.fan-layout {
+  height: 30rem;
+}
+@media (min-width: 480px) { .fan-layout { height: 36rem; } }
+@media (min-width: 640px) { .fan-layout { height: 42rem; } }
+@media (min-width: 768px) { .fan-layout { height: 48rem; } }
+@media (min-width: 1024px){ .fan-layout { height: 54rem; } }
+
+/* Card base — sized like a real project card */
+.fan-card {
+  position: absolute;
+  width: 13rem;
+  height: 22rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow:
+    0 12px 40px rgba(0,0,0,0.55),
+    0 2px 10px rgba(0,0,0,0.3),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+  will-change: transform, opacity;
+  transform-origin: center bottom;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.fan-card:hover {
+  box-shadow:
+    0 24px 64px rgba(0,0,0,0.7),
+    0 4px 20px rgba(251,191,36,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+  border-color: rgba(251,191,36,0.2);
+}
+
+/* Reset <button> styling so it looks identical to <div>/<a> cards */
+button.fan-card {
+  background: none;
+  padding: 0;
+  text-align: left;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Responsive card sizes */
+@media (min-width: 480px)  { .fan-card { width: 15rem;   height: 25rem; } }
+@media (min-width: 640px)  { .fan-card { width: 17rem;   height: 27rem; } }
+@media (min-width: 768px)  { .fan-card { width: 19rem;   height: 30rem; } }
+@media (min-width: 1024px) { .fan-card { width: 21rem;   height: 33rem; } }
+
+/* ─────────────────────────────────────────────────────────────── */
+
 /* reusable grain/noise texture, used by GradientBackground */
 .bg-grain {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
