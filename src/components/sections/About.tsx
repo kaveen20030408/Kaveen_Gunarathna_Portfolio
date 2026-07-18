@@ -25,10 +25,14 @@ export function About() {
           <Card className="flex flex-col gap-5">
             <p className="text-sm uppercase tracking-[0.3em] text-white/40">Who I Am</p>
             <p className="leading-7 text-white/70">
-              I&apos;m <span className="font-semibold text-white">Kaveen Gunarathna</span>, a Computer
-              Science undergraduate at SLIIT University, Sri Lanka — aspiring to become a
-              professional software engineer. I enjoy working across the full stack, building REST
-              APIs, reactive UIs, and reliable backend services.
+              I&apos;m <span className="font-semibold text-white">Kaveen Gunarathna</span>, A Computer Science undergraduate at SLIIT who picks up new technologies fast, applies them with intent, and consistently delivers 
+              work that goes beyond the brief. Academically strong across core CS disciplines from algorithms and data structures through to 
+              compiler theory and software architecture and equally comfortable translating that foundation into working, production-quality 
+              software. Having built full-stack web platforms, and contributed as a recognized leader within IEEE, all while maintaining a 
+              demanding academic schedule. Brings a methodical engineering mindset balanced with the creativity to solve problems that do 
+              not come with a textbook answer. A natural team contributor who communicates clearly, adapts quickly, and takes responsibility 
+              seriously. Looking for a software engineering internship where the bar is high and the opportunity to learn from experienced 
+              engineers is real. 
             </p>
             <p className="leading-7 text-white/70">
               I believe great software starts with clean architecture, thorough testing, and a deep
