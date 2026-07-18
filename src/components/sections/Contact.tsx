@@ -69,7 +69,7 @@ export function Contact() {
                     </div>
                   );
                   return contact.href ? (
-                    <a key={contact.label} href={contact.href}>
+                    <a key={contact.label} href={contact.href} aria-label={contact.label}>
                       {inner}
                     </a>
                   ) : (
@@ -90,6 +90,7 @@ export function Contact() {
                 <a
                   href="mailto:gunarathnakaveen3@gmail.com"
                   className="inline-flex items-center gap-2 rounded-full bg-amber-300/10 px-5 py-2.5 text-sm font-semibold text-amber-300 ring-1 ring-amber-300/20 transition hover:bg-amber-300/20"
+                  aria-label="Send an Email"
                 >
                   Send an Email
                 </a>

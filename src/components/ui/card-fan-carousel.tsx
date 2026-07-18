@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 
 // ─── Types ─────────────────────────────────────────────────────────────────────
@@ -93,11 +94,12 @@ function RichCardFace({ card, index }: { card: CardItem; index: number }) {
     <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", background: "linear-gradient(160deg, #0f192d 0%, #080f1e 100%)" }}>
       {/* Image */}
       <div style={{ position: "relative", flexShrink: 0, height: isRich ? "44%" : "100%", overflow: "hidden" }}>
-        <img
+        <Image
           src={card.imgUrl}
-          loading="lazy"
           alt={card.alt || `Card ${index + 1}`}
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+          fill
+          style={{ objectFit: "cover" }}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         {/* Bottom fade into content */}
         {isRich && (
