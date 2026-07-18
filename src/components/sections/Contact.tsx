@@ -95,6 +95,7 @@ export function Contact() {
                 </a>
                 <a
                   href="/resume.pdf"
+                  download="Kaveen_Gunarathna_CV.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold text-white/70 transition hover:border-white/30 hover:text-white"
