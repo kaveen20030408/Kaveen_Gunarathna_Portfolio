@@ -56,6 +56,7 @@ export function Hero() {
           </Link>
           <a
             href="/resume.pdf"
+            download="Kaveen_Gunarathna_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-amber-300/30 px-5 py-3 text-sm font-semibold text-amber-300/80 transition hover:border-amber-300/60 hover:text-amber-300"
