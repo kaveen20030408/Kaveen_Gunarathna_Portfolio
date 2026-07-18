@@ -1,5 +1,6 @@
 import { skills } from "@/data/skills";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
+import { HolographicCard } from "@/components/ui/holographic-card";
 
 const categoryIcons: Record<string, string> = {
   "Languages":      "⟨/⟩",
@@ -50,37 +51,38 @@ export function Skills() {
 
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {skills.map((group, index) => (
-            <div
-              key={group.category}
-              className={`group rounded-2xl border bg-white/5 p-5 backdrop-blur-sm transition-all duration-300 hover:bg-white/8 ${
-                categoryColors[group.category] ?? "border-white/10 hover:border-white/20"
-              }`}
-            >
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <span className="text-lg">{categoryIcons[group.category] ?? "◆"}</span>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
-                    {group.category}
-                  </h3>
-                </div>
-                <span className="text-xs font-mono text-white/20">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-              </div>
-
-              <div className="mt-4 flex flex-wrap gap-2">
-                {group.items.map((item) => (
-                  <span
-                    key={item}
-                    className={`rounded-full px-3 py-1 text-xs font-medium transition-transform duration-200 hover:scale-105 ${
-                      badgeColors[group.category] ?? "bg-white/10 text-white/70 ring-1 ring-white/10"
-                    }`}
-                  >
-                    {item}
+            <HolographicCard key={group.category} className="h-full">
+              <div
+                className={`group h-full rounded-2xl border bg-white/5 p-5 backdrop-blur-sm transition-colors duration-300 hover:bg-white/8 ${
+                  categoryColors[group.category] ?? "border-white/10 hover:border-white/20"
+                }`}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <span className="text-lg">{categoryIcons[group.category] ?? "◆"}</span>
+                    <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+                      {group.category}
+                    </h3>
+                  </div>
+                  <span className="text-xs font-mono text-white/20">
+                    {String(index + 1).padStart(2, "0")}
                   </span>
-                ))}
+                </div>
+
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {group.items.map((item) => (
+                    <span
+                      key={item}
+                      className={`rounded-full px-3 py-1 text-xs font-medium transition-transform duration-200 hover:scale-105 ${
+                        badgeColors[group.category] ?? "bg-white/10 text-white/70 ring-1 ring-white/10"
+                      }`}
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            </HolographicCard>
           ))}
         </div>
       </section>
