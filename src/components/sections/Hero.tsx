@@ -46,38 +46,43 @@ export function Hero() {
           </span>
         </div>
 
-        <PulseBeams
-          beams={beams}
-          gradientColors={gradientColors}
-          className="mt-8 w-full rounded-3xl"
-        >
-          <div className="flex flex-wrap justify-center sm:justify-start gap-4 p-8 relative z-50">
+        <div className="mt-8 flex flex-wrap justify-center sm:justify-start gap-4 p-4 relative z-50">
+          <PulseBeams beams={beams} gradientColors={gradientColors} className="!w-auto !h-auto !min-h-0 bg-white/5 rounded-full overflow-hidden">
             <Link href="/projects">
               <Button>View Projects</Button>
             </Link>
+          </PulseBeams>
+          
+          <PulseBeams beams={beams} gradientColors={gradientColors} className="!w-auto !h-auto !min-h-0 bg-white/5 rounded-full overflow-hidden">
             <Link
               href="/contact"
-              className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white/80 transition hover:border-white/30 hover:bg-white/10 hover:text-white"
+              className="inline-flex items-center rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white/80 transition hover:border-white/30 hover:bg-white/10 hover:text-white"
             >
               Contact Me
             </Link>
+          </PulseBeams>
+
+          <PulseBeams beams={beams} gradientColors={gradientColors} className="!w-auto !h-auto !min-h-0 bg-amber-500/5 rounded-full overflow-hidden">
             <a
               href="/resume.pdf"
               download="Kaveen_Gunarathna_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-amber-300/30 bg-amber-500/5 px-5 py-3 text-sm font-semibold text-amber-300/80 transition hover:border-amber-300/60 hover:bg-amber-500/10 hover:text-amber-300"
+              className="inline-flex items-center gap-2 rounded-full border border-amber-300/30 px-5 py-3 text-sm font-semibold text-amber-300/80 transition hover:border-amber-300/60 hover:bg-amber-500/10 hover:text-amber-300"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
               Download CV
             </a>
+          </PulseBeams>
+
+          <PulseBeams beams={beams} gradientColors={gradientColors} className="!w-auto !h-auto !min-h-0 bg-blue-500/10 rounded-full overflow-hidden">
             <a
               href="https://www.linkedin.com/in/kaveen-gunarathna/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-5 py-3 text-sm font-semibold text-blue-300/90 transition hover:border-blue-400/60 hover:bg-blue-500/20 hover:text-blue-300"
+              className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 px-5 py-3 text-sm font-semibold text-blue-300/90 transition hover:border-blue-400/60 hover:bg-blue-500/20 hover:text-blue-300"
               aria-label="LinkedIn Profile"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -85,11 +90,14 @@ export function Hero() {
               </svg>
               LinkedIn
             </a>
+          </PulseBeams>
+
+          <PulseBeams beams={beams} gradientColors={gradientColors} className="!w-auto !h-auto !min-h-0 bg-white/5 rounded-full overflow-hidden">
             <a
               href="https://github.com/kaveen20030408"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white/70 transition hover:border-white/30 hover:bg-white/10 hover:text-white"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white/70 transition hover:border-white/30 hover:bg-white/10 hover:text-white"
               aria-label="GitHub Profile"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -97,8 +105,8 @@ export function Hero() {
               </svg>
               GitHub
             </a>
-          </div>
-        </PulseBeams>
+          </PulseBeams>
+        </div>
       </div>
 
       {/* Profile photo */}
