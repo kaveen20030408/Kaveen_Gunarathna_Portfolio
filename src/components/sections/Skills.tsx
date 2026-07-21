@@ -59,7 +59,6 @@ export function Skills() {
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <span className="text-lg">{categoryIcons[group.category] ?? "◆"}</span>
                     <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
                       {group.category}
                     </h3>
