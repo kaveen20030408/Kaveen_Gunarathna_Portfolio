@@ -130,7 +130,7 @@ export function Hero() {
 
         {/* 4. University */}
         <div
-          className="absolute text-right z-40 max-md:top-[12%] max-md:right-[5%] md:top-[20%] md:right-[4%]"
+          className="absolute text-right z-40 max-md:top-[32%] max-md:right-[15%] md:top-[20%] md:right-[4%]"
         >
           <p className="max-md:text-[9px] text-[10px] uppercase tracking-widest text-white/60 drop-shadow-md">
             SLIIT · Sri Lanka
